@@ -1,0 +1,17 @@
+---
+import Toolbar from "../components/Toolbar.tsx";
+---
+<html lang="en">
+  <head><meta charset="utf-8" /><title>heavy sync blocker</title>
+    <script is:inline>
+      // heavy synchronous work before the island hydrates
+      const t0 = Date.now(); let x = 0;
+      while (Date.now() - t0 < 600) { x += Math.sqrt(Date.now() % 7); }
+      window.__blocked = x;
+    </script>
+  </head>
+  <body>
+    <h1>Heavy sync blocker variant</h1>
+    <Toolbar client:only="react" />
+  </body>
+</html>
