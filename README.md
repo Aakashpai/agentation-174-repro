@@ -3,6 +3,10 @@
 Minimal Astro 5 project on Vite 6 with `<Agentation client:only="react" />`, built to check
 https://github.com/benjitaylor/agentation/issues/174 (settings panel sometimes unstyled on a hard refresh).
 
+Run it in the browser: https://stackblitz.com/github/Aakashpai/agentation-174-repro
+
+Or locally:
+
 ```
 npm install
 npm ls vite --all        # 6.4.3 only
